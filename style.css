@@ -9,9 +9,8 @@ body{
   margin: 0;
 }
 
-/* =========================
-   🎨 PALETA DO SITE (PADRÃO)
-=========================
+/* 
+    PALETA DO SITE
 
 FUNDO PRINCIPAL → #f4fbf8
 FUNDO SEÇÕES → #f9f9f9
@@ -29,8 +28,7 @@ TEXTO FOOTER → #eee
 SOMBRAS:
 box-shadow: 0px 10px 25px rgba(0,0,0,0.15);
 box-shadow: 0px 8px 20px rgba(0,0,0,0.25);
-
-========================= */
+*/
 
 
 /* TÍTULOS */
@@ -69,6 +67,7 @@ h1, h2, h3{
 .logo-img{
   width: 45px;
   height: 45px;
+ 
 }
 
 .brand-text{
@@ -152,12 +151,15 @@ h1, h2, h3{
   width: 50%;
   display: flex;
   justify-content: flex-end;
+ 
 }
 
 .hero-image img{
   width: 90%;
+  
   border-radius: 25px;
   box-shadow: 0px 10px 25px rgba(0,0,0,0.15);
+  
 }
 
 .hero-text{
@@ -166,6 +168,23 @@ h1, h2, h3{
   display: flex;
   flex-direction: column;
 }
+
+.badge{
+
+ background: #e9f7ef;
+  padding: 8px 14px;
+  border-radius: 20px;
+  display: inline-block;
+  font-size: 14px;
+  color: #28a745;
+  margin-top: 10px;
+  font-weight: bold;
+  
+
+
+
+}
+
 
 /* TEXTOS */
 
@@ -224,6 +243,7 @@ p{
   text-align: left;
   box-shadow: 0px 10px 25px rgba(0,0,0,0.15);
   background: #fff;
+  border-top: 4px solid #28a745;
 }
 
 .card-img1{
@@ -279,7 +299,6 @@ p{
 
 /* TEXTO CENTRAL */
 
-
 .close{
   text-align: center;
   padding: 30px;
@@ -295,36 +314,86 @@ p{
   margin-right: 8px;
 }
 
-/* FRASE DE IMPACTO */
+/* DESTAQUE */
 
 .destaque{
   display: block;
   font-size: 20px;
   font-weight: 500;
-  color: #333;
-  margin-bottom: 25px;
-text-align:center;
-margin: 0 auto;
-margin-bottom: 18px;
+  margin: 0 auto 18px;
 }
 
-/* TEXTO ABAIXO */
+/* TEXTO */
 
 .sobre-texto{
   max-width: 700px;
   margin: 0 auto;
   text-align:center;
-    display: block;
-    margin-bottom: 18px;
+  justify-items: center;
 }
 
 .sobre-texto p{
   margin-bottom: 15px;
-  color: #555;
-  text-align:center;
-    display: block;
-      margin: 0 auto;
-      margin-bottom: 18px;
+}
+
+/*  AVALIAÇÕES  */
+
+.testimonials{
+  background-color: #f4fbf8;
+  padding: 50px 20px;
+  text-align: center;
+}
+
+.testimonials h2{
+  margin-bottom: 30px;
+}
+
+.testimonials-container{
+  display: flex;
+  justify-content: center;
+  gap: 25px;
+  flex-wrap: wrap;
+  max-width: 1200px; 
+  margin: 0 auto;     /
+}
+
+.testimonial{
+  flex: 1 1 280px; 
+  max-width: 280px;
+  background: #fff;
+  padding: 20px;
+  border-radius: 12px;
+  box-shadow: 0px 10px 25px rgba(0,0,0,0.15);
+  transition: 0.3s;
+}
+
+.testimonial:hover{
+  transform: translateY(-5px);
+  transition: 0.3s;
+}
+
+.testimonial:hover .stars i {
+  transform: scale(1.2);
+}
+
+.foto{
+  width: 89px;
+  height: 95px;
+  border-radius: 60%;
+  object-fit: cover;
+  margin-bottom: 10px;
+   
+}
+
+.testimonial p{
+  font-style: italic;
+}
+
+.testimonial span{
+  display: block;
+  margin-top: 10px;
+  font-weight: bold;
+  color: #28a745;
 }
 
 /* BLOCO FINAL */
@@ -338,53 +407,58 @@ margin-bottom: 18px;
   width: 50%;
 }
 
-/* ÍCONES */
-
 .contact i, .info i{
   color: #28a745;
-  margin-right: 8px;
 }
 
-/* DESTAQUE HORÁRIO */
+.stars{
 
-.info p:last-child{
-  background-color: #e9f7ef;
-  padding: 10px;
-  border-radius: 8px;
+color: #ffc107;
+margin-bottom: 10px ;
+transition: 0.3s;
+cursor: pointer;
+
+
+
+}
+
+.horario{
+
+background: #e9f7ef;
+  padding: 8px 14px;
+  border-radius: 20px;
+  display: inline-block;
+  font-size: 14px;
+  color: #28a745;
+  margin-top: 10px;
   font-weight: bold;
-  color: #28a745;
+  
+
+
 }
 
-/* LINKS */
-
-.contact a{
-  text-decoration: none;
-  color: #333;
+.stars i{
+  transition: 0.3s;
 }
 
-.contact a:hover{
-  color: #28a745;
+.stars i:hover{
+
+transform: scale(1.3);
+color: #ff9800;
+ transition: 0.3s;
+
+
+
 }
 
-/* LISTAS */
 
-ul{
-  padding-left: 0;
-}
 
-li{
-  margin-bottom: 8px;
-}
-
-/* =========================
-   FOOTER PREMIUM
-========================= */
+/* FOOTER */
 
 .footer{
   background-color: #1f1f1f;
   color: #eee;
-  padding: 50px 20px 20px;
-  margin-top: 40px;
+  padding: 50px 20px;
 }
 
 .footer-container{
@@ -392,65 +466,16 @@ li{
   margin: 0 auto;
   display: flex;
   justify-content: space-between;
-  gap: 40px;
   flex-wrap: wrap;
 }
-
-.footer h3, .footer h4{
-  color: #fff;
-}
-
-.footer p{
-  color: #ccc;
-}
-
-/* LINKS FOOTER */
-
-.footer-links ul{
-  list-style: none;
-}
-
-.footer-links a{
-  color: #ccc;
-  text-decoration: none;
-}
-
-.footer-links a:hover{
-  color: #28a745;
-}
-
-/* REDES */
-
-.social-icons{
-  display: flex;
-  gap: 15px;
-  font-size: 22px;
-}
-
-.social-icons a{
-  color: #ccc;
-}
-
-.social-icons a:hover{
-  color: #28a745;
-}
-
-/* BASE FOOTER */
 
 .footer-bottom{
-  border-top: 1px solid #444;
-  margin-top: 30px;
-  padding-top: 15px;
+  margin-top: 20px;
   display: flex;
   justify-content: space-between;
-  flex-wrap: wrap;
-  font-size: 14px;
-  color: #aaa;
 }
 
-/* =========================
-   📱 RESPONSIVO
-========================= */
+/* RESPONSIVO */
 
 @media (max-width: 900px){
 
@@ -463,15 +488,6 @@ li{
     width: 100%;
   }
 
-  .hero-text{
-    width: 100%;
-  }
-
-  .hero-image{
-    width: 100%;
-    justify-content: center;
-  }
-
   .layout{
     flex-direction: column;
   }
@@ -480,39 +496,8 @@ li{
     flex-direction: column;
   }
 
-  .info, .contact{
-    width: 100%;
-  }
-
   .services-cards{
     flex-direction: column;
-    align-items: center;
-  }
-
-}
-
-@media (max-width: 600px){
-
-  h1{
-    font-size: 26px;
-  }
-
-  h2{
-    font-size: 22px;
-  }
-
-  .nav-links{
-    display: none;
-  }
-
-  .footer-container{
-    flex-direction: column;
-    text-align: center;
-  }
-
-  .footer-bottom{
-    flex-direction: column;
-    text-align: center;
   }
 
 }
