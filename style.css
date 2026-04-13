@@ -1,0 +1,518 @@
+html {
+  scroll-behavior: smooth;
+  font-size: 18px;
+}
+
+body{
+  font-family: 'Poppins', sans-serif;
+  color: #333;
+  margin: 0;
+}
+
+/* =========================
+   🎨 PALETA DO SITE (PADRÃO)
+=========================
+
+FUNDO PRINCIPAL → #f4fbf8
+FUNDO SEÇÕES → #f9f9f9
+FUNDO FOOTER → #1f1f1f
+
+VERDE PRINCIPAL → #28a745
+VERDE HOVER → #23913b
+VERDE SUAVE → #e9f7ef
+
+TEXTO PRINCIPAL → #333
+TEXTO SECUNDÁRIO → #555
+TEXTO CLARO → #ccc
+TEXTO FOOTER → #eee
+
+SOMBRAS:
+box-shadow: 0px 10px 25px rgba(0,0,0,0.15);
+box-shadow: 0px 8px 20px rgba(0,0,0,0.25);
+
+========================= */
+
+
+/* TÍTULOS */
+
+h1, h2, h3{
+  font-family: 'Playfair Display', serif;
+  font-weight: 700;
+}
+
+/* NAVBAR */
+
+.navbar{
+  background-color: #f4fbf8;
+  padding: 15px 20px;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+.nav-container{
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+/* BRAND */
+
+.brand{
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.logo-img{
+  width: 45px;
+  height: 45px;
+}
+
+.brand-text{
+  display: flex;
+  flex-direction: column;
+}
+
+.name{
+  font-size: 20px;
+  font-weight: 700;
+}
+
+.subtitle{
+  font-size: 12px;
+  color: #28a745;
+}
+
+/* LINKS */
+
+.nav-links{
+  list-style: none;
+  display: flex;
+  gap: 30px;
+}
+
+.nav-links a{
+  text-decoration: none;
+  color: #333;
+  font-weight: 500;
+  transition: 0.3s;
+}
+
+.nav-links a:hover{
+  color: #28a745;
+}
+
+/* BOTÃO NAV */
+
+.btn-nav{
+  background-color: #28a745;
+  color: white;
+  padding: 10px 22px;
+  border-radius: 30px;
+  text-decoration: none;
+  font-weight: bold;
+  transition: 0.3s;
+}
+
+.btn-nav:hover{
+  background-color: #23913b;
+  transform: translateY(-2px);
+}
+
+/* HERO */
+
+.hero{
+  background-color: #f4fbf8;
+  padding: 30px 20px;
+}
+
+.hero-container{
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  max-width: 1200px;
+  margin: 0 auto;
+  gap: 40px;
+  padding: 30px 20px;
+  border-radius: 12px;
+  box-shadow: 0px 10px 25px rgba(0,0,0,0.15);
+}
+
+.hero-main{
+  display: flex;
+  gap: 40px;
+  align-items: flex-start;
+  width: 70%;
+}
+
+.hero-image{
+  width: 50%;
+  display: flex;
+  justify-content: flex-end;
+}
+
+.hero-image img{
+  width: 90%;
+  border-radius: 25px;
+  box-shadow: 0px 10px 25px rgba(0,0,0,0.15);
+}
+
+.hero-text{
+  width: 50%;
+  max-width: 420px;
+  display: flex;
+  flex-direction: column;
+}
+
+/* TEXTOS */
+
+h1{
+  font-size: 34px;
+  margin-bottom: 20px;
+}
+
+.introduction h2{
+  font-size: 34px;
+}
+
+p{
+  font-size: 18px;
+  line-height: 1.6;
+  color: #555;
+  margin-bottom: 20px;
+  max-width: 500px;
+}
+
+/* BOTÃO */
+
+.btn{
+  display: inline-block;
+  font-size: 18px;
+  background-color: #28a745;
+  color:#fff;
+  padding: 14px 28px;
+  border-radius: 56px;
+  font-weight: bold;
+  box-shadow: 0px 4px 10px rgba(0,0,0,0.15);
+  transition: 0.3s;
+  text-decoration: none;
+  text-align: center;
+}
+
+.btn:hover {
+  background-color:#23913b;
+  transform: translateY(-3px);
+}
+
+/* SERVICES */
+
+.services-cards{
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  padding: 30px;
+  background-color: #f9f9f9;
+}
+
+.card{
+  width: 320px;
+  padding: 16px;
+  border-radius: 12px;
+  text-align: left;
+  box-shadow: 0px 10px 25px rgba(0,0,0,0.15);
+  background: #fff;
+}
+
+.card-img1{
+  width: 100%;
+  border-radius: 10px;
+  margin-bottom: 10px;
+}
+
+/* ABOUT */
+
+.about{
+  margin-top: 30px;
+  background-color: #f9f9f9;
+}
+
+.container-about{
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+/* CARD */
+
+.box{
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 12px;
+  box-shadow: 0px 10px 25px rgba(0,0,0,0.15);
+}
+
+/* LAYOUT */
+
+.layout{
+  display: flex;
+  gap: 40px;
+}
+
+.introduction{
+  width: 60%;
+  padding: 32px;
+}
+
+.specilisation{
+  margin-top: 50px;
+  width: 40%;
+}
+
+.specilisation ul{
+  list-style: none;
+}
+
+/* TEXTO CENTRAL */
+
+
+.close{
+  text-align: center;
+  padding: 30px;
+}
+
+.close h3{
+  font-size: 26px;
+  margin-bottom: 10px;
+}
+
+.close h3 i{
+  color: #28a745;
+  margin-right: 8px;
+}
+
+/* FRASE DE IMPACTO */
+
+.destaque{
+  display: block;
+  font-size: 20px;
+  font-weight: 500;
+  color: #333;
+  margin-bottom: 25px;
+text-align:center;
+margin: 0 auto;
+margin-bottom: 18px;
+}
+
+/* TEXTO ABAIXO */
+
+.sobre-texto{
+  max-width: 700px;
+  margin: 0 auto;
+  text-align:center;
+    display: block;
+    margin-bottom: 18px;
+}
+
+.sobre-texto p{
+  margin-bottom: 15px;
+  color: #555;
+  text-align:center;
+    display: block;
+      margin: 0 auto;
+      margin-bottom: 18px;
+}
+
+/* BLOCO FINAL */
+
+.closing{
+  display: flex;
+  gap: 25px;
+}
+
+.info, .contact{
+  width: 50%;
+}
+
+/* ÍCONES */
+
+.contact i, .info i{
+  color: #28a745;
+  margin-right: 8px;
+}
+
+/* DESTAQUE HORÁRIO */
+
+.info p:last-child{
+  background-color: #e9f7ef;
+  padding: 10px;
+  border-radius: 8px;
+  font-weight: bold;
+  color: #28a745;
+}
+
+/* LINKS */
+
+.contact a{
+  text-decoration: none;
+  color: #333;
+}
+
+.contact a:hover{
+  color: #28a745;
+}
+
+/* LISTAS */
+
+ul{
+  padding-left: 0;
+}
+
+li{
+  margin-bottom: 8px;
+}
+
+/* =========================
+   FOOTER PREMIUM
+========================= */
+
+.footer{
+  background-color: #1f1f1f;
+  color: #eee;
+  padding: 50px 20px 20px;
+  margin-top: 40px;
+}
+
+.footer-container{
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  gap: 40px;
+  flex-wrap: wrap;
+}
+
+.footer h3, .footer h4{
+  color: #fff;
+}
+
+.footer p{
+  color: #ccc;
+}
+
+/* LINKS FOOTER */
+
+.footer-links ul{
+  list-style: none;
+}
+
+.footer-links a{
+  color: #ccc;
+  text-decoration: none;
+}
+
+.footer-links a:hover{
+  color: #28a745;
+}
+
+/* REDES */
+
+.social-icons{
+  display: flex;
+  gap: 15px;
+  font-size: 22px;
+}
+
+.social-icons a{
+  color: #ccc;
+}
+
+.social-icons a:hover{
+  color: #28a745;
+}
+
+/* BASE FOOTER */
+
+.footer-bottom{
+  border-top: 1px solid #444;
+  margin-top: 30px;
+  padding-top: 15px;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  font-size: 14px;
+  color: #aaa;
+}
+
+/* =========================
+   📱 RESPONSIVO
+========================= */
+
+@media (max-width: 900px){
+
+  .hero-container{
+    flex-direction: column;
+  }
+
+  .hero-main{
+    flex-direction: column;
+    width: 100%;
+  }
+
+  .hero-text{
+    width: 100%;
+  }
+
+  .hero-image{
+    width: 100%;
+    justify-content: center;
+  }
+
+  .layout{
+    flex-direction: column;
+  }
+
+  .closing{
+    flex-direction: column;
+  }
+
+  .info, .contact{
+    width: 100%;
+  }
+
+  .services-cards{
+    flex-direction: column;
+    align-items: center;
+  }
+
+}
+
+@media (max-width: 600px){
+
+  h1{
+    font-size: 26px;
+  }
+
+  h2{
+    font-size: 22px;
+  }
+
+  .nav-links{
+    display: none;
+  }
+
+  .footer-container{
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .footer-bottom{
+    flex-direction: column;
+    text-align: center;
+  }
+
+}
