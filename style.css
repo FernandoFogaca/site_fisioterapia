@@ -501,3 +501,42 @@ color: #ff9800;
   }
 
 }
+
+@media (max-width: 768px){
+
+  /* HERO TOTAL */
+  .hero-container{
+    flex-direction: column;
+    padding: 20px;
+  }
+
+  .hero-main{
+    flex-direction: column;
+    width: 100%;
+    gap: 20px;
+  }
+
+  /* TEXTO */
+  .hero-text{
+    width: 100%;
+    max-width: 100%;
+    text-align: left;
+  }
+
+  /* IMAGEM */
+  .hero-image{
+    width: 100%;
+    justify-content: center;
+  }
+
+  .hero-image img{
+    width: 100%;
+    max-width: 320px;
+  }
+
+  /* CARD LATERAL */
+  .hero-card{
+    width: 100%;
+  }
+
+}
