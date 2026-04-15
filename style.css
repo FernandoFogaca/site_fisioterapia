@@ -1,3 +1,13 @@
+
+
+*{
+  box-sizing: border-box;
+}
+
+html, body {
+  overflow-x: hidden;
+}
+
 html {
   scroll-behavior: smooth;
   font-size: 18px;
@@ -349,12 +359,12 @@ p{
 }
 
 .testimonials-container{
-  display: flex;
+  display: grid;
+  grid-template-columns: repeat(3, 280px);
   justify-content: center;
   gap: 25px;
-  flex-wrap: wrap;
-  max-width: 1200px; 
-  margin: 0 auto;     /
+  width: fit-content;
+  margin: 0 auto;
 }
 
 .testimonial{
@@ -365,6 +375,7 @@ p{
   border-radius: 12px;
   box-shadow: 0px 10px 25px rgba(0,0,0,0.15);
   transition: 0.3s;
+
 }
 
 .testimonial:hover{
@@ -394,6 +405,7 @@ p{
   margin-top: 10px;
   font-weight: bold;
   color: #28a745;
+
 }
 
 /* BLOCO FINAL */
@@ -477,6 +489,16 @@ color: #ff9800;
 
 /* RESPONSIVO */
 
+
+html, body {
+  overflow-x: hidden;
+}
+* {
+  max-width: 100%;
+}
+
+
+
 @media (max-width: 900px){
 
   .hero-container{
@@ -501,29 +523,40 @@ color: #ff9800;
   }
 
 }
+/* RESPONSIVO CORRETO (SEM QUEBRAR DESKTOP) */
 
 @media (max-width: 768px){
 
-  /* HERO TOTAL */
+  body{
+    overflow-x: hidden;
+  }
+
+  /* NAV */
+  .nav-links{
+    display: none; /* depois você coloca hamburger */
+  }
+
+  .nav-container{
+    flex-wrap: wrap;
+  }
+
+  /* HERO */
   .hero-container{
     flex-direction: column;
+    gap: 20px;
     padding: 20px;
   }
 
   .hero-main{
     flex-direction: column;
     width: 100%;
-    gap: 20px;
   }
 
-  /* TEXTO */
   .hero-text{
     width: 100%;
     max-width: 100%;
-    text-align: left;
   }
 
-  /* IMAGEM */
   .hero-image{
     width: 100%;
     justify-content: center;
@@ -531,12 +564,49 @@ color: #ff9800;
 
   .hero-image img{
     width: 100%;
-    max-width: 320px;
+    max-width: 280px;
   }
 
-  /* CARD LATERAL */
-  .hero-card{
+  /* SERVICES */
+  .services-cards{
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .card{
+    width: 90%;
+  }
+
+  /* ABOUT */
+  .layout{
+    flex-direction: column;
+  }
+
+  .closing{
+    flex-direction: column;
+  }
+
+  .info, .contact{
     width: 100%;
+  }
+
+  /* TESTIMONIALS */
+  .testimonials-container{
+  grid-template-columns: 1fr;
+  width: 100%;
+  width: fit-content;
+}
+
+  /* FOOTER */
+  .footer-container{
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  .footer-bottom{
+    flex-direction: column;
+    gap: 10px;
+    text-align: center;
   }
 
 }
