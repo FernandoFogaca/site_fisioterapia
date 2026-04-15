@@ -105,6 +105,13 @@ h1, h2, h3{
 
 /* LINKS */
 
+
+.nav-links.active{
+
+display: flex;
+
+}
+
 .nav-links{
   list-style: none;
   display: flex;
@@ -137,6 +144,18 @@ h1, h2, h3{
 .btn-nav:hover{
   background-color: #23913b;
   transform: translateY(-2px);
+}
+
+.menu-toggle.active span:nth-child(1){
+  transform: rotate(45deg) translate(5px, 5px);
+}
+
+.menu-toggle.active span:nth-child(2){
+  opacity: 0;
+}
+
+.menu-toggle.active span:nth-child(3){
+  transform: rotate(-45deg) translate(5px, -5px);
 }
 
 /* HERO */
@@ -505,6 +524,28 @@ html, body {
   max-width: 100%;
 }
 
+/* menu do mobile*/
+.menu-toggle{
+
+  display: none;
+  flex-direction: column;
+  cursor: pointer;
+  gap: 5px;
+
+}
+
+.menu-toggle span{ 
+
+width: 25px;
+height: 3px;
+background: #333;
+ display: block;
+transition: 0.3s;
+
+
+}
+
+
 
 
 @media (max-width: 900px){
@@ -541,11 +582,27 @@ html, body {
 
   /* NAV */
   .nav-links{
-    display: none; /* depois você coloca hamburger */
+    display: none; 
+    flex-direction: column;
+    background-color: #fff;
+    position: absolute;
+    top:70px ;
+    right: 20px;
+    width: 200px;
+     padding: 20px;
+      border-radius: 10px;
+       box-shadow: 0px 10px 25px rgba(0,0,0,0.15);
+
   }
 
   .nav-container{
     flex-wrap: wrap;
+  }
+
+  .menu-toggle{
+    display: flex;
+
+
   }
 
   /* HERO */
