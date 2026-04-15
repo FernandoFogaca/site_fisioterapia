@@ -1,4 +1,6 @@
-
+section{
+  scroll-margin-top: 100px;
+}
 
 *{
   box-sizing: border-box;
@@ -17,7 +19,10 @@ body{
   font-family: 'Poppins', sans-serif;
   color: #333;
   margin: 0;
+  
+  padding-top: 80px; /* altura do menu */
 }
+
 
 /* 
     PALETA DO SITE
@@ -53,9 +58,12 @@ h1, h2, h3{
 .navbar{
   background-color: #f4fbf8;
   padding: 15px 20px;
-  position: sticky;
+  position: fixed;
   top: 0;
+  left: 0;
+  width: 100%;
   z-index: 1000;
+  
 }
 
 .nav-container{
